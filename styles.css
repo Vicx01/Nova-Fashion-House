@@ -1,0 +1,54 @@
+
+        /* Typography Customization */
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* MARQUEE ANIMATION CSS */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Hero Image Overlay */
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37; /* Gold hover */
+        }
+    
