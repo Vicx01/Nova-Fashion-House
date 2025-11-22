@@ -67,8 +67,211 @@
 
     
 
-    <!-- MAIN CONTENT -->
-    <main class="flex-grow">
+    <!-- MAIN SHOPPING AREA -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-12">
+        
+        <!-- Sidebar / Filters -->
+        <aside class="md:w-1/4">
+            <div class="sticky top-24">
+                <h3 class="text-xl font-bold mb-6 border-b border-gray-300 pb-2">Filter By</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-bold text-sm uppercase tracking-wide mb-3 text-gray-500">Category</h4>
+                        <div class="flex flex-col space-y-2 items-start" id="filter-container">
+                            <button class="filter-btn active text-sm hover:text-gray-600 px-3 py-1 rounded transition w-full text-left" data-category="all">View All</button>
+                            <button class="filter-btn text-sm hover:text-gray-600 px-3 py-1 rounded transition w-full text-left" data-category="apparel">Apparel</button>
+                            <button class="filter-btn text-sm hover:text-gray-600 px-3 py-1 rounded transition w-full text-left" data-category="accessories">Accessories</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-black text-white p-6 text-center">
+                    <p class="text-sm uppercase tracking-widest mb-2">Need Assistance?</p>
+                    <p class="text-xs text-gray-400 mb-4">Our stylists are available 24/7.</p>
+                    <button class="border border-white px-4 py-2 text-xs uppercase hover:bg-white hover:text-black transition">Chat Now</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="md:w-3/4">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-sm text-gray-500" id="product-count">Showing 8 items</span>
+                <select class="border-b border-gray-300 bg-transparent py-1 text-sm outline-none">
+                    <option>Sort by: Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+
+            <!-- STATIC HTML PRODUCT GRID -->
+            <!-- Note: "data-category" attributes are used by the filter JS at the bottom -->
+            <div id="collection-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Product 1 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="apparel">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1935&auto=format&fit=crop" alt="The Ethereal Silk Gown" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Apparel</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">The Ethereal Silk Gown</h3>
+                        <p class="text-gray-600">$1,200</p>
+                    </div>
+                </a>
+
+                <!-- Product 2 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="apparel">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop" alt="Obsidian Tailored Suit" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Apparel</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Obsidian Tailored Suit</h3>
+                        <p class="text-gray-600">$950</p>
+                    </div>
+                </a>
+
+                <!-- Product 3 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="accessories">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070&auto=format&fit=crop" alt="Nova Gold Pendant" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Accessories</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Nova Gold Pendant</h3>
+                        <p class="text-gray-600">$450</p>
+                    </div>
+                </a>
+
+                <!-- Product 4 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="apparel">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1887&auto=format&fit=crop" alt="Midnight Velvet Blazer" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Apparel</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Midnight Velvet Blazer</h3>
+                        <p class="text-gray-600">$680</p>
+                    </div>
+                </a>
+
+                <!-- Product 5 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="accessories">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=2069&auto=format&fit=crop" alt="Artisan Leather Satchel" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Accessories</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Artisan Leather Satchel</h3>
+                        <p class="text-gray-600">$890</p>
+                    </div>
+                </a>
+
+                <!-- Product 6 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="accessories">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?q=80&w=1887&auto=format&fit=crop" alt="Cashmere Wrap Scarf" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Accessories</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Cashmere Wrap Scarf</h3>
+                        <p class="text-gray-600">$220</p>
+                    </div>
+                </a>
+
+                <!-- Product 7 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="accessories">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=2080&auto=format&fit=crop" alt="Scarlet Evening Pumps" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Accessories</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Scarlet Evening Pumps</h3>
+                        <p class="text-gray-600">$560</p>
+                    </div>
+                </a>
+
+                <!-- Product 8 -->
+                <a href="product_details.html" class="product-item group cursor-pointer animate-fade-in block" data-category="apparel">
+                    <div class="relative overflow-hidden h-80 mb-4 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1936&auto=format&fit=crop" alt="Structured Trench Coat" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 z-10">
+                             <div class="bg-white p-2 rounded-full shadow hover:text-red-500 transition"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end justify-center pb-6">
+                            <span class="bg-white text-black px-8 py-2 text-xs uppercase tracking-widest font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-black hover:text-white">
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Apparel</div>
+                        <h3 class="text-lg font-bold font-serif leading-tight mb-1">Structured Trench Coat</h3>
+                        <p class="text-gray-600">$1,100</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
 
  
 
