@@ -40,10 +40,7 @@ function toggleMenu() {
             setupFilters();
         });
 
-        // Toggle Mobile Menu
-        function toggleMenu() {
-            alert("Mobile menu toggle would expand here.");
-        }
+        
 
  // products.html script.js content
         // Simple logic to handle size selection visuals
