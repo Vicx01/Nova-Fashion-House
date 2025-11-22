@@ -42,7 +42,6 @@ html {
     animation-play-state: paused;
 }
 
-<<<<<<< HEAD
 @keyframes scroll-left {
     0% {
         transform: translateX(100%);
@@ -100,7 +99,3 @@ html {
 .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
 }
-=======
-        /* Animation Keyframes */
-        
->>>>>>> d6adc5b06435c509b9536743881dadec33c75dfd
