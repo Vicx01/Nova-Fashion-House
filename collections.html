@@ -1,23 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Collections - Nova Fashion House</title>
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<nav>
-<a href="index.html">Home</a> |
-<a href="about.html">About Us</a> |
-<a href="collections.html">Collections</a> |
-<a href="board.html">Board of Trustees</a> |
-<a href="events.html">Events</a> |
-<a href="appointments.html">Appointments</a> |
-<a href="contact.html">Contact Us</a>
-</nav>
-<marquee>Winter Collection Launch – Nov 15 | New Store Opening Soon!</marquee>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Fashion House | Redefining Elegance</title>
+    
+    <!-- Tailwind CSS for Styling (Acting as our main stylesheet framework) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-<h1>Collections</h1><p>Select a category.</p>
-<script src="js/script.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- INTERNAL CSS -->
+     <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="bg-stone-50 text-gray-900 flex flex-col min-h-screen">
+
+    <!-- 1. MARQUEE SECTION -->
+    <div class="bg-black text-white py-2 text-sm uppercase tracking-widest marquee-container border-b border-gold-500">
+        <div class="marquee-content" id="marquee-text">
+            ✨ GRAND OPENING OF NOVA FASHION HOUSE • UPCOMING GALA: DECEMBER 15TH • BOOK YOUR PRIVATE CONSULTATION TODAY • FREE SHIPPING ON ALL COUTURE ORDERS • 
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-3xl font-bold serif-font tracking-tighter border-2 border-black px-2 py-1">NOVA</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 uppercase text-xs tracking-widest font-semibold">
+                    <a href="index.html" class="text-gold-600 hover:text-black transition">Home</a>
+                    <a href="collections.html" class="text-gray-500 hover:text-black transition">Collection</a>
+                    <a href="trustee.html" class="text-gray-500 hover:text-black transition">Board of Trustees</a>
+                    <a href="events.html" class="text-gray-500 hover:text-black transition">Events</a>
+                    <a href="bookings.html" class="bg-black text-white px-4 py-2 hover:bg-gray-800 transition">Book Appointment</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-500 hover:text-black focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Home</a>
+            <a href="collections.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Collection</a>
+            <a href="trustee.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Board of Trustees</a>
+            <a href="events.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Events</a>
+            <a href="bookings.html" class="block px-4 py-2 text-sm hover:bg-gray-100 font-bold text-gold-600">Book Now</a>
+                   </div>
+    </nav>
+
+
+    
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+
+ 
+
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-2xl font-bold serif-font mb-4">NOVA.</h4>
+                <p class="text-gray-400 text-sm">Redefining the boundaries of modern fashion with timeless elegance and sustainable innovation.</p>
+            </div>
+            <div>
+                <h5 class="font-bold uppercase tracking-widest mb-4 text-xs">Explore</h5>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="collections.html" class="hover:text-white">Collection</a></li>
+                    <li><a href="trustee.html" class="hover:text-white">Trustees</a></li>
+                    <li><a href="events.html" class="hover:text-white">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold uppercase tracking-widest mb-4 text-xs">Legal</h5>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold uppercase tracking-widest mb-4 text-xs">Connect</h5>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 border-t border-gray-800 pt-8 text-gray-500 text-xs">
+            &copy; 2025 Nova Fashion House. All rights reserved.
+        </div>
+    </footer>
+
+   <script src="script.js">
+
+   </script>
 </body>
 </html>
