@@ -44,3 +44,18 @@ function toggleMenu() {
         function toggleMenu() {
             alert("Mobile menu toggle would expand here.");
         }
+
+ // products.html script.js content
+        // Simple logic to handle size selection visuals
+        function selectSize(btn) {
+            // Reset all buttons
+            document.querySelectorAll('.size-btn').forEach(b => {
+                b.classList.remove('bg-black', 'text-white', 'border-black');
+                b.classList.add('bg-transparent', 'text-gray-900', 'border-gray-300');
+            });
+            
+            // Highlight clicked
+            btn.classList.remove('bg-transparent', 'text-gray-900', 'border-gray-300');
+            btn.classList.add('bg-black', 'text-white', 'border-black');
+        }
+
