@@ -142,11 +142,9 @@
         subgraph IndexGroup [Home Page]
             direction TB
             Index("index.html"):::page
+            Index --- I_Marquee[Marquee Banner]:::dom
             Index --- I_Nav[Nav Bar]:::dom
             Index --- I_Hero[Hero Header]:::dom
-            Index --- I_Marquee[Marquee Banner]:::dom
-            Index --- I_Grid[Product Grid]:::dom
-            Index --- I_Trustees[Trustees Teaser]:::dom
             Index --- I_Footer[Footer]:::dom
         end
 
