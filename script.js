@@ -122,3 +122,49 @@ function toggleMenu() {
                 form.addEventListener('submit', handleFormspreeSubmit);
             });
         });
+// COUNTDOWN TIMER JS for events.html
+        // Wrapped in an IIFE to prevent "identifier has already been declared" errors if the script runs multiple times
+        (function() {
+            // Set the date we're counting down to (Dec 15th of the current or next year)
+            const currentYear = new Date().getFullYear();
+            let galaDate = new Date(`December 15, ${currentYear} 19:00:00`).getTime();
+            
+            // If date has passed, add a year
+            if (new Date().getTime() > galaDate) {
+                galaDate = new Date(`December 15, ${currentYear + 1} 19:00:00`).getTime();
+            }
+
+            // Update the count down every 1 second
+            const timerInterval = setInterval(function() {
+
+                // Get today's date and time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                const distance = galaDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in elements
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
+
+                if (daysEl) daysEl.innerHTML = days < 10 ? '0' + days : days;
+                if (hoursEl) hoursEl.innerHTML = hours < 10 ? '0' + hours : hours;
+                if (minutesEl) minutesEl.innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                if (secondsEl) secondsEl.innerHTML = seconds < 10 ? '0' + seconds : seconds;
+
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    const countdownEl = document.getElementById("countdown");
+                    if (countdownEl) countdownEl.innerHTML = "<div class='text-2xl font-bold col-span-4'>The Event Has Started!</div>";
+                }
+            }, 1000);
+        })();
