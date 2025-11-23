@@ -145,7 +145,3 @@ html {
             font-weight: bold;
             color: black;
         }
-
-/* MERMAID DIAGRAM CSS */
-         
-        .mermaid { background: #ffffff; padding: 30px; border: 1px solid #eee; border-radius: 8px; overflow-x: auto; }
