@@ -168,3 +168,4 @@ function toggleMenu() {
                 }
             }, 1000);
         })();
+        // End of countdown timer IIFE
