@@ -49,6 +49,7 @@
                     <a href="collections.html" class="text-gray-500 hover:text-black transition">Collection</a>
                     <a href="trustee.html" class="text-gray-500 hover:text-black transition">Board of Trustees</a>
                     <a href="events.html" class="text-gray-500 hover:text-black transition">Events</a>
+                    <a href="DOM.html" class="text-gray-500 hover:text-black transition">DOM</a>
                     <a href="booking.html" class="bg-black text-white px-4 py-2 hover:bg-gray-800 transition">Book
                         Appointment</a>
                 </div>
@@ -69,6 +70,7 @@
             <a href="collections.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Collection</a>
             <a href="trustee.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Board of Trustees</a>
             <a href="events.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Events</a>
+            <a href="DOM.html" class="block px-4 py-2 text-sm hover:bg-gray-100">DOM</a>
             <a href="bookings.html" class="block px-4 py-2 text-sm hover:bg-gray-100 font-bold text-gold-600">Book
                 Now</a>
         </div>
@@ -81,24 +83,30 @@
     <header class="bg-stone-900 text-white py-20 text-center px-4 relative overflow-hidden">
         <div class="relative z-10">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Connect with Nova</h1>
-            <p class="text-gray-400 max-w-xl mx-auto italic">"True luxury is personal. Experience the atelier difference."</p>
+            <p class="text-gray-400 max-w-xl mx-auto italic">"True luxury is personal. Experience the atelier
+                difference."</p>
         </div>
         <!-- Decorative Background Element -->
-        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div
+            class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
-        
+
         <!-- LEFT COLUMN: Info & Map -->
         <div class="lg:col-span-1 space-y-12">
             <!-- Contact Info -->
             <div>
-                <h3 class="text-xl font-bold serif-font mb-6 border-l-4 border-gold-500 pl-4 border-yellow-600">The Atelier</h3>
+                <h3 class="text-xl font-bold serif-font mb-6 border-l-4 border-gold-500 pl-4 border-yellow-600">The
+                    Atelier</h3>
                 <div class="space-y-4 text-sm text-gray-600">
-                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-1 w-6 text-black"></i> <span>Nova Fashion, O.P. Fingesi Road, Mabushi, <br>Abuja 900108, Federal Capital Territory</span></p>
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-1 w-6 text-black"></i> <span>Nova
+                            Fashion, O.P. Fingesi Road, Mabushi, <br>Abuja 900108, Federal Capital Territory</span></p>
                     <p class="flex items-center"><i class="fas fa-phone-alt w-6 text-black"></i> +1 (234) 567-8901</p>
-                    <p class="flex items-center"><i class="fas fa-envelope w-6 text-black"></i> ga.official0001@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-envelope w-6 text-black"></i>
+                        ga.official0001@gmail.com</p>
                 </div>
             </div>
 
@@ -106,24 +114,29 @@
             <div>
                 <h3 class="text-xl font-bold serif-font mb-6 border-l-4 border-gray-300 pl-4">Opening Hours</h3>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex justify-between"><span>Mon - Fri</span> <span class="font-bold">10:00 AM - 7:00 PM</span></li>
-                    <li class="flex justify-between"><span>Saturday</span> <span class="font-bold">11:00 AM - 5:00 PM</span></li>
-                    <li class="flex justify-between text-gray-400"><span>Sunday</span> <span>By Appointment Only</span></li>
+                    <li class="flex justify-between"><span>Mon - Fri</span> <span class="font-bold">10:00 AM - 7:00
+                            PM</span></li>
+                    <li class="flex justify-between"><span>Saturday</span> <span class="font-bold">11:00 AM - 5:00
+                            PM</span></li>
+                    <li class="flex justify-between text-gray-400"><span>Sunday</span> <span>By Appointment Only</span>
+                    </li>
                 </ul>
             </div>
 
-        
+
         </div>
 
         <!-- RIGHT COLUMN: Forms -->
         <div class="lg:col-span-2 bg-white p-8 shadow-sm border border-gray-100">
-            
+
             <!-- Tabs -->
             <div class="flex border-b border-gray-200 mb-8">
-                <button onclick="switchTab('appointment')" id="tab-appointment" class="tab-btn active w-1/2 py-4 text-center uppercase text-xs tracking-widest text-gray-500 hover:text-black transition">
+                <button onclick="switchTab('appointment')" id="tab-appointment"
+                    class="tab-btn active w-1/2 py-4 text-center uppercase text-xs tracking-widest text-gray-500 hover:text-black transition">
                     Book Appointment
                 </button>
-                <button onclick="switchTab('inquiry')" id="tab-inquiry" class="tab-btn w-1/2 py-4 text-center uppercase text-xs tracking-widest text-gray-500 hover:text-black transition">
+                <button onclick="switchTab('inquiry')" id="tab-inquiry"
+                    class="tab-btn w-1/2 py-4 text-center uppercase text-xs tracking-widest text-gray-500 hover:text-black transition">
                     General Inquiry
                 </button>
             </div>
@@ -131,20 +144,23 @@
             <!-- FORM 1: BOOKING -->
             <div id="content-appointment" class="tab-content active">
                 <h2 class="text-2xl font-bold serif-font mb-2">Schedule a Visit</h2>
-                <p class="text-gray-500 text-sm mb-8">Select a service and time. Our team will confirm your slot via email.</p>
-                
+                <p class="text-gray-500 text-sm mb-8">Select a service and time. Our team will confirm your slot via
+                    email.</p>
+
                 <form action="https://formspree.io/f/xwpzawkd" method="POST" class="space-y-6">
                     <!-- Hidden field to identify form type in Formspree -->
                     <input type="hidden" name="form_type" value="Appointment_Request">
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold mb-2">First Name</label>
-                            <input type="text" name="firstName" required class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition">
+                            <input type="text" name="firstName" required
+                                class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold mb-2">Last Name</label>
-                            <input type="text" name="lastName" required class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition">
+                            <input type="text" name="lastName" required
+                                class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition">
                         </div>
                     </div>
 
@@ -153,21 +169,24 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <label class="cursor-pointer">
                                 <input type="radio" name="service" value="Bridal" class="peer sr-only">
-                                <div class="border border-gray-200 p-4 text-center hover:bg-stone-50 peer-checked:bg-black peer-checked:text-white transition">
+                                <div
+                                    class="border border-gray-200 p-4 text-center hover:bg-stone-50 peer-checked:bg-black peer-checked:text-white transition">
                                     <div class="font-bold text-sm mb-1">Bridal</div>
                                     <div class="text-[10px] uppercase opacity-70">90 Mins</div>
                                 </div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="service" value="Bespoke" class="peer sr-only">
-                                <div class="border border-gray-200 p-4 text-center hover:bg-stone-50 peer-checked:bg-black peer-checked:text-white transition">
+                                <div
+                                    class="border border-gray-200 p-4 text-center hover:bg-stone-50 peer-checked:bg-black peer-checked:text-white transition">
                                     <div class="font-bold text-sm mb-1">Bespoke</div>
                                     <div class="text-[10px] uppercase opacity-70">60 Mins</div>
                                 </div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="service" value="Styling" class="peer sr-only">
-                                <div class="border border-gray-200 p-4 text-center hover:bg-stone-50 peer-checked:bg-black peer-checked:text-white transition">
+                                <div
+                                    class="border border-gray-200 p-4 text-center hover:bg-stone-50 peer-checked:bg-black peer-checked:text-white transition">
                                     <div class="font-bold text-sm mb-1">Styling</div>
                                     <div class="text-[10px] uppercase opacity-70">45 Mins</div>
                                 </div>
@@ -178,11 +197,13 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold mb-2">Preferred Date</label>
-                            <input type="date" name="date" required class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition text-gray-500 uppercase text-sm">
+                            <input type="date" name="date" required
+                                class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition text-gray-500 uppercase text-sm">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold mb-2">Time Slot</label>
-                            <select name="timeSlot" class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition text-gray-500 text-sm">
+                            <select name="timeSlot"
+                                class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition text-gray-500 text-sm">
                                 <option value="Morning">Morning (10AM - 1PM)</option>
                                 <option value="Afternoon">Afternoon (1PM - 4PM)</option>
                                 <option value="Evening">Evening (4PM - 7PM)</option>
@@ -190,7 +211,8 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-black text-white py-4 uppercase tracking-widest font-bold hover:bg-stone-800 transition">
+                    <button type="submit"
+                        class="w-full bg-black text-white py-4 uppercase tracking-widest font-bold hover:bg-stone-800 transition">
                         Confirm Request
                     </button>
                 </form>
@@ -200,19 +222,21 @@
             <div id="content-inquiry" class="tab-content">
                 <h2 class="text-2xl font-bold serif-font mb-2">Send a Message</h2>
                 <p class="text-gray-500 text-sm mb-8">For orders, press, careers, or general questions.</p>
-                
+
                 <form action="https://formspree.io/f/xwpzawkd" method="POST" class="space-y-6">
                     <!-- Hidden field to identify form type -->
                     <input type="hidden" name="form_type" value="General_Inquiry">
 
                     <div>
                         <label class="block text-xs uppercase tracking-widest font-bold mb-2">Email Address</label>
-                        <input type="email" name="email" required class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition">
+                        <input type="email" name="email" required
+                            class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition">
                     </div>
-                    
+
                     <div>
                         <label class="block text-xs uppercase tracking-widest font-bold mb-2">Subject</label>
-                        <select name="subject" class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition text-sm">
+                        <select name="subject"
+                            class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition text-sm">
                             <option value="General">General Question</option>
                             <option value="Press">Order Placement</option>
                             <option value="Wholesale">Wholesale Inquiry</option>
@@ -223,10 +247,12 @@
 
                     <div>
                         <label class="block text-xs uppercase tracking-widest font-bold mb-2">Message</label>
-                        <textarea name="message" rows="5" required class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition"></textarea>
+                        <textarea name="message" rows="5" required
+                            class="w-full bg-stone-50 border border-gray-200 p-3 outline-none focus:border-black transition"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-stone-900 text-white py-4 uppercase tracking-widest font-bold hover:bg-black transition">
+                    <button type="submit"
+                        class="w-full bg-stone-900 text-white py-4 uppercase tracking-widest font-bold hover:bg-black transition">
                         Send Message
                     </button>
                 </form>
