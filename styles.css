@@ -145,3 +145,9 @@ html {
             font-weight: bold;
             color: black;
         }
+
+/* MERMAID DIAGRAM CSS */
+          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; text-align: center; background-color: #ffffff; }
+        h1 { margin-bottom: 10px; color: #000; }
+        p { margin-bottom: 30px; color: #666; }
+        .mermaid { background: #ffffff; padding: 30px; border: 1px solid #eee; border-radius: 8px; overflow-x: auto; }

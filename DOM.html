@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM OF NOVA</title>
-
+ <!-- Import Mermaid.js for diagram rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    
     <!-- Tailwind CSS for Styling (Acting as our main stylesheet framework) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -114,9 +116,86 @@
                     </ul>
                 </li>
             </ul>
-            <p>The DOM structure is designed to be semantic and accessible, ensuring that users with disabilities can
-                navigate and interact with the website effectively. Additionally, the use of classes and IDs allows for
-                targeted styling and scripting, enhancing both aesthetics and functionality.</p>
+            <p>The DOM structure is designed to be semantic and accessible, ensuring that users can
+                navigate and interact with the website effectively.</p>
+            <h3 class="text-lg font-semibold mt-8 mb-4">Diagram Representation</h3>
+             <div class="mermaid">
+    graph LR
+        %% Styling Definitions - B/W MONOCHROME
+        classDef root fill:#000,color:#fff,stroke:#000,stroke-width:2px,font-size:16px;
+        classDef page fill:#fff,color:#000,stroke:#000,stroke-width:2px,rx:0,ry:0,font-weight:bold;
+        classDef dom fill:#fff,color:#333,stroke:#666,stroke-width:1px,rx:0,ry:0;
+        classDef component fill:#fff,color:#000,stroke:#000,stroke-width:1px,stroke-dasharray: 5 5;
+
+        %% Root Node
+        Site("Nova Fashion House"):::root
+
+        %% Main Navigation Branches
+        Site ==> Index
+        Site ==> About
+        Site ==> Collection
+        Site ==> Trustees
+        Site ==> Events
+        Site ==> Booking
+
+        %% 1. HOME PAGE STRUCTURE
+        subgraph IndexGroup [Home Page]
+            direction TB
+            Index("index.html"):::page
+            Index --- I_Nav[Nav Bar]:::dom
+            Index --- I_Hero[Hero Header]:::dom
+            Index --- I_Marquee[Marquee Banner]:::dom
+            Index --- I_Grid[Product Grid]:::dom
+            Index --- I_Trustees[Trustees Teaser]:::dom
+            Index --- I_Footer[Footer]:::dom
+        end
+
+        %% 2. ABOUT PAGE STRUCTURE
+        subgraph AboutGroup [About Page]
+            direction TB
+            About("about.html"):::page
+            About --- A_Content[Main Content Block]:::dom
+        end
+
+        %% 3. COLLECTION STRUCTURE
+        subgraph CollectionGroup [Collection Page]
+            direction TB
+            Collection("collection.html"):::page
+            Collection --- C_Sidebar[Filter Sidebar]:::dom
+            Collection --- C_Grid[Product Grid]:::dom
+            
+            %% Link to Product Detail
+            C_Grid -.-> Product("Product Details<br>(product_details.html)"):::component
+        end
+
+        %% 4. TRUSTEES STRUCTURE
+        subgraph TrusteesGroup [Trustees Page]
+            direction TB
+            Trustees("trustees.html"):::page
+            Trustees --- T_Grid[Member Grid]:::dom
+        end
+
+        %% 5. EVENTS STRUCTURE
+        subgraph EventsGroup [Events Page]
+            direction TB
+            Events("events.html"):::page
+            Events --- E_Count[Countdown Timer]:::dom
+            Events --- E_List[Event Schedule]:::dom
+        end
+
+        %% 6. BOOKING STRUCTURE
+        subgraph BookingGroup [Booking Page]
+            direction TB
+            Booking("booking.html"):::page
+            Booking --- B_Tabs[Tab Controller]:::dom
+            B_Tabs --- B_Appt[Appointment Form]:::dom
+            B_Tabs --- B_Inq[Inquiry Form]:::dom
+        end
+
+        %% Global Link Styling
+        linkStyle default stroke:#000,stroke-width:1px,fill:none;
+    </div>
+
 
     </main>
 

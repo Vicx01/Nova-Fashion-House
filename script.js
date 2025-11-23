@@ -169,3 +169,10 @@ function toggleMenu() {
             }, 1000);
         })();
         // End of countdown timer IIFE
+
+    // MERMAID DIAGRAM INITIALIZATION 
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base',
+            flowchart: { curve: 'basis' }
+        });
